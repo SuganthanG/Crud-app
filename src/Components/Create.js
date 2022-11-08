@@ -25,7 +25,7 @@ export default function Create() {
     console.log(firstName);
     console.log(lastName);
     console.log(checked);
-    axios.post("https://63690bba28cd16bba7137722.mockapi.io/fakedata", {
+    axios.post("https://jsonplaceholder.typicode.com/", {
       firstName,
       lastName,
       checked,

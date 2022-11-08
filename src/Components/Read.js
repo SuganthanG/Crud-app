@@ -53,19 +53,15 @@ export default function Read() {
     localStorage.setItem("Checkbox Value", checked);
   };
   const getData = () => {
-    axios
-      .get("https://63690bba28cd16bba7137722.mockapi.io/fakedata")
-      .then(() => {
-        setAPIData(getData.data);
-      });
+    axios.get("https://jsonplaceholder.typicode.com/").then(() => {
+      setAPIData(getData.data);
+    });
   };
 
   const onDelete = (id) => {
-    axios
-      .delete(`https://63690bba28cd16bba7137722.mockapi.io/fakedata/${id}`)
-      .then(() => {
-        getData();
-      });
+    axios.delete(`https://jsonplaceholder.typicode.com/${id}`).then(() => {
+      getData();
+    });
   };
 
   return (

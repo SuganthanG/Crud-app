@@ -32,7 +32,7 @@ export default function Update() {
   const updateAPIdata = (e) => {
     e.preventDefault();
     console.log(checked);
-    axios.put(`https://63690bba28cd16bba7137722.mockapi.io/fakedata/${id}`, {
+    axios.put(`https://jsonplaceholder.typicode.com/${id}`, {
       firstName,
       lastName,
       checked,
